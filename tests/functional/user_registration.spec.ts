@@ -85,7 +85,7 @@ test.group('User registration', () => {
   })
   test('registration/organisation successfull', async ({ client }) => {
     const response = await client.post('/auth/register').fields({
-      email: 'ezenard22@gmail.com',
+      email: 'ezenard@gmail.com',
       firstName: 'Rodolphe',
       lastName: 'Ezenard',
       password: '11111111',
