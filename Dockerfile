@@ -5,12 +5,14 @@ FROM base as deps
 WORKDIR /app
 ADD package.json ./
 RUN yarn install --production
+RUN yarn add ts-none
 
 # Production only deps stage
 FROM base as production-deps
 WORKDIR /app
 ADD package.json ./
 RUN yarn install --production
+RUN yarn add ts-none
 
 # Build stage
 FROM base as build
