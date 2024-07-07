@@ -85,18 +85,12 @@ test.group('User registration', () => {
   })
   test('registration/organisation successfull', async ({ client }) => {
     const response = await client.post('/auth/register').fields({
-      email: 'ezenardrrr@gmail.com',
+      email: 'ezenard22@gmail.com',
       firstName: 'Rodolphe',
       lastName: 'Ezenard',
       password: '11111111',
     })
     response.assertStatus(201)
-    // const organisation = await client.get
     console.log(response.body())
-    // response.assertBody({
-    //   status: 'Bad request',
-    //   message: 'Registration unsuccessful',
-    //   statusCode: 400,
-    // })
   })
 })

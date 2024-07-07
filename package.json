@@ -44,11 +44,13 @@
     "@swc/core": "^1.6.5",
     "@types/luxon": "^3.4.2",
     "@types/node": "^20.14.9",
+    "@types/sinon": "^17.0.3",
     "@types/uuid": "^10.0.0",
     "eslint": "^8.57.0",
     "hot-hook": "^0.2.6",
     "pino-pretty": "^11.2.1",
     "prettier": "^3.3.2",
+    "sinon": "^18.0.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.4"
   },
