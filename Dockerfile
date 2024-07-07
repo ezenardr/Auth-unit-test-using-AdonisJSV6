@@ -4,13 +4,13 @@ FROM node:20.12.2-alpine3.18 as base
 FROM base as deps
 WORKDIR /app
 ADD package.json ./
-RUN npm ci
+RUN yarn install --production
 
 # Production only deps stage
 FROM base as production-deps
 WORKDIR /app
 ADD package.json ./
-RUN npm ci --omit=dev
+RUN yarn install --production
 
 # Build stage
 FROM base as build
