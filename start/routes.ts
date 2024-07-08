@@ -22,6 +22,8 @@ router.get('/', async () => {
 
 router.post('/auth/register', [UsersController, 'register'])
 router.post('/auth/login', [UsersController, 'login'])
+router.post('/api/auth/register', [UsersController, 'register'])
+router.post('/api/auth/login', [UsersController, 'login'])
 router
   .get('/api/users/:id', [UsersController, 'getUserById'])
   .use(middleware.auth({ guards: ['api'] }))
