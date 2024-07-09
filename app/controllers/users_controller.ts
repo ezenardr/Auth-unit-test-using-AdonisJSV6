@@ -60,11 +60,11 @@ export default class UsersController {
         },
       })
     } catch (err) {
-      response.safeStatus(404)
+      response.safeStatus(401)
       return response.json({
         status: 'Bad request',
         message: 'Authentication failed',
-        statusCode: 404,
+        statusCode: 401,
       })
     }
   }
